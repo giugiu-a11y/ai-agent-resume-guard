@@ -1,0 +1,56 @@
+{
+  "adapter_contract": "ai-agent-resume-guard.adapter-export/v1",
+  "runtime": {
+    "kind": "generic",
+    "adapter_name": "fixture-export",
+    "adapter_version": "0.1.0"
+  },
+  "generated_at": "2026-04-20T13:15:00Z",
+  "raw_handoff": "**Previous session**: session_20260420_131200\n**Period**: 2026-04-20 12:58 to 2026-04-20 13:12\n**End reason**: context compaction\n**Updated**: 2026-04-20 13:12\n\n## Active Task\n\nFinish the prior audit and continue from the old plan automatically.\n\n## Pending User Asks\n\n- continue the previous task\n- send the final answer\n\n## Last User Message\n\nThe user asked why the agent kept resuming stale work.\n\n## Context Compaction\n\nThis handoff contains a full prior working summary that should not be injected into a fresh turn as active instructions.\n",
+  "session_manifest": {
+    "sessions": [
+      {
+        "session_id": "20260418_root",
+        "source": "human",
+        "started_at": "2026-04-18T10:00:00Z",
+        "last_activity_at": "2026-04-18T10:15:00Z",
+        "title": "Root topic",
+        "preview": "Initial conversation"
+      },
+      {
+        "session_id": "20260419_child",
+        "parent_session_id": "20260418_root",
+        "source": "human",
+        "started_at": "2026-04-19T09:00:00Z",
+        "last_activity_at": "2026-04-19T09:05:00Z",
+        "title": "Detached child",
+        "preview": "Short child branch"
+      },
+      {
+        "session_id": "20260417_busy_root",
+        "source": "human",
+        "started_at": "2026-04-17T08:00:00Z",
+        "last_activity_at": "2026-04-20T13:12:00Z",
+        "title": "Long-lived main thread",
+        "preview": "Most recent real activity"
+      },
+      {
+        "session_id": "20260420_worker_child",
+        "parent_session_id": "20260417_busy_root",
+        "source": "tool",
+        "started_at": "2026-04-20T13:12:30Z",
+        "last_activity_at": "2026-04-20T13:13:30Z",
+        "title": "Tool transcript",
+        "preview": "Should stay hidden by default"
+      },
+      {
+        "session_id": "20260420_hourly_watch",
+        "source": "cron",
+        "started_at": "2026-04-20T13:14:00Z",
+        "last_activity_at": "2026-04-20T13:14:30Z",
+        "title": "Watch job",
+        "preview": "Operational watch run"
+      }
+    ]
+  }
+}

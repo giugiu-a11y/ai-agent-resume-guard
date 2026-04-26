@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Agent Resume Guard Policy",
+  "type": "object",
+  "required": [
+    "explicit_resume_required",
+    "hidden_sources",
+    "prefer_latest_activity",
+    "max_handoff_chars",
+    "summary_timeout_seconds",
+    "summary_total_timeout_seconds",
+    "summary_budget_seconds"
+  ],
+  "properties": {
+    "explicit_resume_required": {
+      "type": "boolean"
+    },
+    "hidden_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prefer_latest_activity": {
+      "type": "boolean"
+    },
+    "max_handoff_chars": {
+      "type": "integer",
+      "minimum": 200
+    },
+    "summary_timeout_seconds": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "summary_total_timeout_seconds": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "summary_budget_seconds": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "additionalProperties": false
+}

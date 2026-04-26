@@ -1,0 +1,37 @@
+{
+  "sessions": [
+    {
+      "session_id": "20260418_root",
+      "source": "human",
+      "started_at": "2026-04-18T10:00:00Z",
+      "last_activity_at": "2026-04-18T10:15:00Z",
+      "title": "Root topic",
+      "preview": "Initial conversation"
+    },
+    {
+      "session_id": "20260419_child",
+      "parent_session_id": "20260418_root",
+      "source": "human",
+      "started_at": "2026-04-19T09:00:00Z",
+      "last_activity_at": "2026-04-19T09:05:00Z",
+      "title": "Detached child",
+      "preview": "Short child branch"
+    },
+    {
+      "session_id": "20260417_busy_root",
+      "source": "human",
+      "started_at": "2026-04-17T08:00:00Z",
+      "last_activity_at": "2026-04-20T13:12:00Z",
+      "title": "Long-lived main thread",
+      "preview": "Most recent real activity"
+    },
+    {
+      "session_id": "20260420_tool_run",
+      "source": "tool",
+      "started_at": "2026-04-20T13:13:00Z",
+      "last_activity_at": "2026-04-20T13:14:00Z",
+      "title": "Tool transcript",
+      "preview": "Should stay hidden by default"
+    }
+  ]
+}

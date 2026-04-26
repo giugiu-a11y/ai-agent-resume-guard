@@ -1,0 +1,28 @@
+{
+  "sessions": [
+    {
+      "session_id": "planner-route-a",
+      "source": "human",
+      "started_at": "2026-04-20T12:00:00Z",
+      "last_activity_at": "2026-04-20T12:05:00Z",
+      "title": "Planner route",
+      "preview": "Human route owner"
+    },
+    {
+      "session_id": "worker-build-1",
+      "source": "tool",
+      "started_at": "2026-04-20T12:06:00Z",
+      "last_activity_at": "2026-04-20T12:16:00Z",
+      "title": "Build worker transcript",
+      "preview": "Operational worker log"
+    },
+    {
+      "session_id": "watch-hourly-9",
+      "source": "cron",
+      "started_at": "2026-04-20T12:20:00Z",
+      "last_activity_at": "2026-04-20T12:21:00Z",
+      "title": "Watch job",
+      "preview": "Automation run"
+    }
+  ]
+}

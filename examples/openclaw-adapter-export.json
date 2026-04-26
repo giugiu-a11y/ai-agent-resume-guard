@@ -1,0 +1,39 @@
+{
+  "adapter_contract": "ai-agent-resume-guard.adapter-export/v1",
+  "runtime": {
+    "kind": "openclaw",
+    "adapter_name": "openclaw-session-export",
+    "adapter_version": "0.1.0"
+  },
+  "generated_at": "2026-04-20T12:22:00Z",
+  "raw_handoff": "**Previous session**: planner-route-a\n**Period**: 2026-04-20 12:00 to 2026-04-20 12:21\n**End reason**: worker handoff\n**Updated**: 2026-04-20 12:21\n\n## Active Task\n\nContinue the worker output automatically.\n\n## Last User Message\n\nThe user asked for a verified continuation decision.\n",
+  "session_manifest": {
+    "sessions": [
+      {
+        "session_id": "planner-route-a",
+        "source": "human",
+        "started_at": "2026-04-20T12:00:00Z",
+        "last_activity_at": "2026-04-20T12:05:00Z",
+        "title": "Planner route",
+        "preview": "Human route owner"
+      },
+      {
+        "session_id": "worker-build-1",
+        "parent_session_id": "planner-route-a",
+        "source": "tool",
+        "started_at": "2026-04-20T12:06:00Z",
+        "last_activity_at": "2026-04-20T12:16:00Z",
+        "title": "Build worker transcript",
+        "preview": "Operational worker log"
+      },
+      {
+        "session_id": "watch-hourly-9",
+        "source": "cron",
+        "started_at": "2026-04-20T12:20:00Z",
+        "last_activity_at": "2026-04-20T12:21:00Z",
+        "title": "Watch job",
+        "preview": "Automation run"
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Agent Resume Guard Adapter Export",
+  "type": "object",
+  "required": ["adapter_contract", "runtime", "session_manifest"],
+  "properties": {
+    "adapter_contract": {
+      "type": "string",
+      "const": "ai-agent-resume-guard.adapter-export/v1"
+    },
+    "runtime": {
+      "type": "object",
+      "required": ["kind"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "adapter_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "adapter_version": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "raw_handoff": {
+      "type": "string",
+      "minLength": 1
+    },
+    "session_manifest": {
+      "$ref": "#/$defs/sessionManifest"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "sessionManifest": {
+      "type": "object",
+      "required": ["sessions"],
+      "properties": {
+        "sessions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["session_id"],
+            "properties": {
+              "session_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "parent_session_id": {
+                "type": ["string", "null"]
+              },
+              "source": {
+                "type": "string"
+              },
+              "started_at": {
+                "type": ["string", "number", "null"]
+              },
+              "last_activity_at": {
+                "type": ["string", "number", "null"]
+              },
+              "title": {
+                "type": "string"
+              },
+              "preview": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

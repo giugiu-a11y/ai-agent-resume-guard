@@ -1,0 +1,29 @@
+{
+  "sessions": [
+    {
+      "session_id": "topic-root-001",
+      "source": "human",
+      "started_at": "2026-04-20T13:00:00Z",
+      "last_activity_at": "2026-04-20T13:14:00Z",
+      "title": "Main topic thread",
+      "preview": "User asks why the agent resumed stale work"
+    },
+    {
+      "session_id": "topic-child-002",
+      "parent_session_id": "topic-root-001",
+      "source": "human",
+      "started_at": "2026-04-20T13:01:00Z",
+      "last_activity_at": "2026-04-20T13:03:00Z",
+      "title": "Short child branch",
+      "preview": "Old detached branch"
+    },
+    {
+      "session_id": "topic-root-legacy",
+      "source": "human",
+      "started_at": "2026-04-18T10:00:00Z",
+      "last_activity_at": "2026-04-19T10:15:00Z",
+      "title": "Older root",
+      "preview": "Previous work"
+    }
+  ]
+}

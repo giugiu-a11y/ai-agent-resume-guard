@@ -1,0 +1,39 @@
+{
+  "adapter_contract": "ai-agent-resume-guard.adapter-export/v1",
+  "runtime": {
+    "kind": "hermes",
+    "adapter_name": "hermes-session-export",
+    "adapter_version": "0.1.0"
+  },
+  "generated_at": "2026-04-20T13:15:00Z",
+  "raw_handoff": "**Previous session**: topic-root-001\n**Period**: 2026-04-20 13:00 to 2026-04-20 13:14\n**End reason**: restart\n**Updated**: 2026-04-20 13:14\n\n## Active Task\n\nResume the previous investigation and finish it without waiting.\n\n## Last User Message\n\nThe user asked why the agent resumed stale work.\n",
+  "session_manifest": {
+    "sessions": [
+      {
+        "session_id": "topic-root-001",
+        "source": "human",
+        "started_at": "2026-04-20T13:00:00Z",
+        "last_activity_at": "2026-04-20T13:14:00Z",
+        "title": "Main topic thread",
+        "preview": "User asks why the agent resumed stale work"
+      },
+      {
+        "session_id": "topic-child-002",
+        "parent_session_id": "topic-root-001",
+        "source": "human",
+        "started_at": "2026-04-20T13:01:00Z",
+        "last_activity_at": "2026-04-20T13:03:00Z",
+        "title": "Short child branch",
+        "preview": "Old detached branch"
+      },
+      {
+        "session_id": "topic-root-legacy",
+        "source": "human",
+        "started_at": "2026-04-18T10:00:00Z",
+        "last_activity_at": "2026-04-19T10:15:00Z",
+        "title": "Older root",
+        "preview": "Previous work"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "project": "ai-agent-resume-guard",
+  "family": "ai-agent-resume-guard",
+  "version": "0.1.0",
+  "active_version": "0.1.0",
+  "status": "public-alpha",
+  "production_branch": "main",
+  "github_repo": "giugiu-a11y/ai-agent-resume-guard",
+  "updated_at": "2026-04-26",
+  "visibility": "public",
+  "notes": "Public alpha focused on safe agent continuity and bounded recall."
+}

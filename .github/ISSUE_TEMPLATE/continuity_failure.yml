@@ -1,0 +1,49 @@
+name: Continuity failure
+description: Report a resume, recall, or handoff safety failure.
+title: "[Continuity]: "
+labels: ["continuity"]
+body:
+  - type: dropdown
+    id: failure_type
+    attributes:
+      label: Failure type
+      options:
+        - Old work resumed without an explicit user request
+        - Wrong session lineage selected
+        - Operational transcript polluted human recall
+        - Raw handoff acted like active instructions
+        - Safe handoff became stale
+        - Other continuity failure
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: Describe the continuity problem using sanitized or synthetic details.
+    validations:
+      required: true
+  - type: textarea
+    id: manifest_shape
+    attributes:
+      label: Manifest shape
+      description: Include a minimal sanitized manifest if possible.
+      render: json
+    validations:
+      required: false
+  - type: textarea
+    id: handoff_shape
+    attributes:
+      label: Handoff shape
+      description: Include only sanitized or synthetic handoff content.
+      render: markdown
+    validations:
+      required: false
+  - type: textarea
+    id: doctor_output
+    attributes:
+      label: Doctor output
+      description: Paste `agent-resume-guard doctor --format json` after removing private data.
+      render: json
+    validations:
+      required: false
