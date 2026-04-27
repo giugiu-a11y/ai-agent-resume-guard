@@ -1,5 +1,8 @@
 # AI Agent Resume Guard For Hermes, OpenClaw, And Multi-Agent Runtimes
 
+[![CI](https://github.com/giugiu-a11y/ai-agent-resume-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/giugiu-a11y/ai-agent-resume-guard/actions/workflows/ci.yml)
+[![Security](https://github.com/giugiu-a11y/ai-agent-resume-guard/actions/workflows/security.yml/badge.svg)](https://github.com/giugiu-a11y/ai-agent-resume-guard/actions/workflows/security.yml)
+
 Stop AI agents from resuming stale work, trusting unsafe handoffs, or picking the wrong session after restarts.
 
 AI Agent Resume Guard is a local safe-resume layer for Hermes-style orchestrators, OpenClaw-style local agent stacks, and any AI agent runtime that restarts, compacts, delegates, or resumes work across long threads.
