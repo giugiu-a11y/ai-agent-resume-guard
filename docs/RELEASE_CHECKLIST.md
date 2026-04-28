@@ -30,9 +30,10 @@ python -m twine check dist/*
 
 - Create the GitHub repository as private first.
 - Push the local `main` branch.
-- Confirm CI passes on GitHub.
+- Confirm CI and Security workflows pass on GitHub.
+- Keep `.github/workflows/security.yml` active with a `gitleaks` scan.
 - Enable secret scanning and push protection when available.
-- Protect `main` with the CI check required.
+- Protect `main` with CI and Security checks required.
 - Create a signed or clearly authored `v0.1.0` tag.
 - Draft release notes from `CHANGELOG.md`.
 - Make the repository public only after the public surface review passes.

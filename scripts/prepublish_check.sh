@@ -18,6 +18,28 @@ PYTHON_BIN="$(choose_python_bin)"
 UV_BIN="$(command -v uv || true)"
 TMP_ROOT="$(mktemp -d /tmp/agent-resume-guard-prepublish.XXXXXX)"
 
+contains_fixed() {
+  local needle="$1"
+  local file="$2"
+
+  if command -v rg >/dev/null 2>&1; then
+    rg -F --quiet "$needle" "$file"
+    return $?
+  fi
+
+  grep -F "$needle" "$file" >/dev/null
+}
+
+SECURITY_WORKFLOW=".github/workflows/security.yml"
+if [[ ! -f "$SECURITY_WORKFLOW" ]]; then
+  echo "AI Agent Resume Guard prepublish checks expected ${SECURITY_WORKFLOW}." >&2
+  exit 1
+fi
+if ! contains_fixed "gitleaks" "$SECURITY_WORKFLOW"; then
+  echo "AI Agent Resume Guard prepublish checks expected gitleaks in ${SECURITY_WORKFLOW}." >&2
+  exit 1
+fi
+
 run_ruff() {
   if [[ -n "${UV_BIN}" ]]; then
     "${UV_BIN}" run --extra dev --python "${PYTHON_BIN}" ruff check .
