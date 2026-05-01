@@ -9,6 +9,7 @@ def test_release_readiness_files_exist() -> None:
     required = [
         ROOT / ".github" / "workflows" / "ci.yml",
         ROOT / ".github" / "workflows" / "security.yml",
+        ROOT / ".github" / "workflows" / "codeql.yml",
         ROOT / "docs" / "ARCHITECTURE.md",
         ROOT / "docs" / "ADAPTER_CONTRACT.md",
         ROOT / "docs" / "RELEASE_CHECKLIST.md",
@@ -29,6 +30,18 @@ def test_security_workflow_runs_gitleaks() -> None:
     content = workflow.read_text(encoding="utf-8").lower()
 
     assert "gitleaks" in content
+    assert "pull_request" in content
+    assert "push" in content
+    assert "branches: [main]" in content
+
+
+def test_codeql_workflow_covers_main_push_and_pr() -> None:
+    workflow = ROOT / ".github" / "workflows" / "codeql.yml"
+    content = workflow.read_text(encoding="utf-8").lower()
+
+    assert "github/codeql-action/init@v3" in content
+    assert "github/codeql-action/autobuild@v3" in content
+    assert "github/codeql-action/analyze@v3" in content
     assert "pull_request" in content
     assert "push" in content
     assert "branches: [main]" in content

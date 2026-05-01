@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/giugiu-a11y/ai-agent-resume-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/giugiu-a11y/ai-agent-resume-guard/actions/workflows/ci.yml)
 [![Security](https://github.com/giugiu-a11y/ai-agent-resume-guard/actions/workflows/security.yml/badge.svg)](https://github.com/giugiu-a11y/ai-agent-resume-guard/actions/workflows/security.yml)
+[![CodeQL](https://github.com/giugiu-a11y/ai-agent-resume-guard/actions/workflows/codeql.yml/badge.svg)](https://github.com/giugiu-a11y/ai-agent-resume-guard/actions/workflows/codeql.yml)
 
 Stop AI agents from resuming stale work, trusting unsafe handoffs, or picking the wrong session after restarts.
 
