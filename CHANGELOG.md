@@ -4,6 +4,7 @@ All notable changes to AI Agent Resume Guard will be documented here.
 
 ## Unreleased
 
+- Switched the Security workflow to an explicit pinned Gitleaks CLI run with `gitleaks detect --no-git --source . --redact --no-banner`.
 - Added a dedicated GitHub Security workflow for automated Gitleaks scanning on pull requests, pushes to `main`, manual dispatches, and weekly scheduled runs.
 - Hardened prepublish checks so release readiness fails if the security workflow or required Gitleaks command disappears.
 - Added project-file tests that lock release-readiness and security workflow expectations.

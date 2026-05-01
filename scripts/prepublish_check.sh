@@ -35,8 +35,8 @@ if [[ ! -f "$SECURITY_WORKFLOW" ]]; then
   echo "AI Agent Resume Guard prepublish checks expected ${SECURITY_WORKFLOW}." >&2
   exit 1
 fi
-if ! contains_fixed "gitleaks" "$SECURITY_WORKFLOW"; then
-  echo "AI Agent Resume Guard prepublish checks expected gitleaks in ${SECURITY_WORKFLOW}." >&2
+if ! contains_fixed "gitleaks detect --no-git --source . --redact --no-banner" "$SECURITY_WORKFLOW"; then
+  echo "AI Agent Resume Guard prepublish checks expected an explicit gitleaks scan command in ${SECURITY_WORKFLOW}." >&2
   exit 1
 fi
 

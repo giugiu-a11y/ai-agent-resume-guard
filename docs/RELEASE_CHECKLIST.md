@@ -8,7 +8,7 @@ Use this before opening the repository or publishing a package.
 make prepublish
 bash scripts/prepublish_check.sh
 bash scripts/privacy_check.sh
-gitleaks detect --source . --redact
+gitleaks detect --no-git --source . --redact --no-banner
 python -m build
 python -m twine check dist/*
 ```

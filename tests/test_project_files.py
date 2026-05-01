@@ -28,7 +28,7 @@ def test_security_workflow_runs_gitleaks() -> None:
     workflow = ROOT / ".github" / "workflows" / "security.yml"
     content = workflow.read_text(encoding="utf-8").lower()
 
-    assert "gitleaks" in content
+    assert "gitleaks detect --no-git --source . --redact --no-banner" in content
     assert "pull_request" in content
     assert "push" in content
     assert "branches: [main]" in content
