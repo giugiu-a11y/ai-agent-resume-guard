@@ -16,7 +16,7 @@ def test_release_readiness_files_exist() -> None:
         ROOT / "docs" / "FIELD_LESSONS.md",
         ROOT / "scripts" / "privacy_check.sh",
         ROOT / "scripts" / "prepublish_check.sh",
-        ROOT / "renovate.json5",
+        ROOT / ".github" / "dependabot.yml",
         ROOT / "uv.lock",
     ]
 
