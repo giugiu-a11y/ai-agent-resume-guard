@@ -65,7 +65,8 @@ The current goal is not breadth. It is a sharp, reviewable first cut around the 
 Requires Python 3.10+.
 
 ```bash
-cd agent-resume-guard
+git clone https://github.com/giugiu-a11y/ai-agent-resume-guard.git
+cd ai-agent-resume-guard
 python3 -m pip install -e ".[dev]"
 agent-resume-guard init
 agent-resume-guard ingest --adapter-export examples/multi-lineage-adapter-export.json

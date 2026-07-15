@@ -43,6 +43,7 @@ dependencies = []
 Homepage = "https://github.com/giugiu-a11y/ai-agent-resume-guard"
 Repository = "https://github.com/giugiu-a11y/ai-agent-resume-guard"
 Issues = "https://github.com/giugiu-a11y/ai-agent-resume-guard/issues"
+Documentation = "https://github.com/giugiu-a11y/ai-agent-resume-guard/tree/main/docs"
 
 [project.optional-dependencies]
 dev = [
